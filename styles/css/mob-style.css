@@ -1,0 +1,84 @@
+@media only screen and (max-width: 800px) {
+  #profileBox h1 {padding: 20px 0px 20px 0px;font-size: 50px;}
+  .profAligner {width: 95%;}
+  .profImg,.profImg img {margin-bottom: 20px;height: 150px;width: 150px;}
+  .name, .id {font-size:5vw;}
+  .underline {display: none;}
+  .collage, .mob, .mail {font-size:3vw;}
+  .typeStyleText {font-size: 17px;}
+}
+
+
+@media only screen and (max-width: 700px) {
+  .centre{height: 300px;}
+  .logo{width: 160px;height: 160px;}
+  .spinner10 {width: 250px;height: 250px;}
+  .spinner11 {width: 220px;height: 220px;}
+  .spinner12 {width: 190px;height: 190px;}
+  .spinner13 {width: 160px;height: 160px;border:5px solid #ff3838;border-right: 1px solid #ff9f1a; }
+  .typeStyleText {font-size: 14px;}
+  .menuAligned {min-width: 60%;}
+  .menuContent ul {flex-wrap: wrap;}
+  .menuContent ul li {margin: 10px;width: 35%;margin: 5px 20px 5px 20px;font-size: 3vw;}
+  .HomeLoginButton {padding: 7px 10px 7px 10px;}
+  .info {min-height: 100vh;padding:40px 0px 40px 0px;}
+  .infoContent h3 {width:32px;height: 32px;margin: 0px auto;margin-bottom: 20px;}
+  .date {font-size: 10vw;}
+  .days {font-size: 4vw;}
+  .mnthyr {font-size: 6vw;}
+  .loc{font-size: 10vw;}
+  .locSub {font-size: 4vw;line-height: 5vw}
+  .locSub a {font-size: 4vw;line-height: 5vw}
+  .infoEvents {padding-top: 30px;}
+  .infoEventText {font-size: 12vw;}
+  #eventsPage h1 {padding: 35px 0px 45px 0px;font-size: 50px;}
+  .eventAligned {width: 100%;}
+  .eventOrgedHolder {width: 98%;}
+  .eventByTitle {padding-left: 15px;}
+  .eventBox {width: 49%;height:300px;font-size: 3vh;margin: 10px 0px 10px 0px;}
+  .eventBoxTitle {top:30%;font-size: 6vw;}
+  .eventBoxSubTit{font-size: 3vw;}
+  #eventShowBox {width: 95%;}
+  .eventContentBoxCenter {width: 100%;}
+  .eventContentBoxCenter h1 {font-size: 11vw;padding: 10px 0px 5px 0px}
+  .eventContentBoxCenter p {font-size: 4vw;}
+  #regBtnBox {margin: 15px 10px 30px 10px}
+  #call {display:contents;}
+  .userInfoTable{width:80%}
+  .regedContainer {width: 90%;font-size: 3vw}
+  .regedContainer h1 {padding: 35px 0px 45px 0px;font-size: 50px;}
+  .regedTableCentered {width: 100%;}
+
+  .img1 h1 {font-size:18vw;}
+  .img2 h1,.img3 h1,.img4 h1 {font-size: 12vw;}
+  .CarTextStyle p {width: 80%;font-size: 4vw;}
+  .carTFDepContainer {width: 90%;}
+  .carTFDepBox {width: 45%;height: 80px;}
+  .about h4 {width: 100%;}
+  .AboutAliner {width: 100%;}
+  .AboutAliner p {width: 100%;padding: 30px 20px 30px 20px; font-size:4vw;}
+  .teaserAligner {width: 90%;}
+  .AboutAliner iframe {width: 100%; height:220px;}
+  .teaserAligner h1 {font-size: 7vw;}
+  .OrgAligned h1 {font-size: 8vw}
+  .OrgDetailContainer h4 {font-size: 5vw;}
+  .OrgDetailContainer p {font-size: 3vw;}
+  .OrgOne{width: 20vh; height:20vh;}
+  .footerCentered p {font-size: 13px;}
+  .hWindows div p {width: 80%;margin: 0px auto;font-size: 4vw;}
+  .hTitle {font-size: 10vw;}
+
+
+
+  /* PUBG */
+  .PUBGAboutBox {background-attachment:none;font-size: 5vw}
+  .CarContainer h1 {font-size: 13vw;}
+  .CarContainer h3 {font-size: 12vw;}
+  .CarContainer p {font-size: 4vw;}
+  .CarAligner img {width: 200px;height: 40px;}
+  .pubgRegAligner {width: 90%;}
+  .PUBGPrizeBoxAliner {width: 90%;}
+  .pubgBiggtStyle {font-size: 9vw}
+  .SponsorContainer h1 {margin-top: 60px;font-size: 30px;}
+
+}

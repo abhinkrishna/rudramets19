@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title> RUDRA'19 | MET'S School Of Engineering</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Hark Designs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rudra TechFest 2k19. Tech Fest of MET's School Of Engineering. Two day TechFest conducted by Computer Science , Electronics and Communication , Electrical and Electronics , Mechanical , Civil and Bio Technology Departments of MET's Engineering College on 29,30  March 2019">
+    <meta name="keywords" content="rudra,techfest,rudra mets,rudra 2019,mets,met's,mets school of engineering, march 2019">
+    <link rel="stylesheet" type="text/css" href="styles/css/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/mob-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/bootstrap.min.css">
+    <link rel="icon" href="styles/css/images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scripts/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/bs/popper.min.js" charset="utf-8"></script>
+    <script src="scripts/bs/bootstrap.min.js" charset="utf-8"></script>
+    <script src="scripts/script.js" charset="utf-8"></script>
+    <script src="scripts/fb/firebase-app.js" charset="utf-8"></script>
+    <script src="scripts/fb/firebase-auth.js" charset="utf-8"></script>
+    <script src="scripts/fb/firebase-firestore.js" charset="utf-8"></script>
+    <script src="appConfig/app.js" charset="utf-8"></script>
+    <script src="scripts/td/typed.js" charset="utf-8"></script>
+    <script src="scripts/mousewheel.js"></script>
+    <!-- sweetalert -->
+    <script src="scripts/sa/sweetalert2@8.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      // scripts
+      $(window).bind('beforeunload', function(){
+        return 'Are you sure about leaving this site?';
+      });
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Raleway|Oswald|Black+Ops+One|Montserrat');
+    </style>
+  </head>
+  <body>
+
+    <!-- nav navbar -->
+    <div class="pos-f-t" id="NavigBr">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-5">
+          <ul class="nav nav-pills flex-rows justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-light menuHome">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light menuEvents">EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light menuProfile">PROFILE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light menuMyEvents">MYEVENTS</a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="btn settings" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- button name -->
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item logout">Logout</a>
+                  <a class="dropdown-item login">Login</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Menu -->
+    <!-- <section id="menu">
+      <div class="menuHeader">
+        <button type="button" id="menuClose"></button>
+        <button type="button" name="button" class="logout">Logout</button>
+      </div>
+      <div class="menuContent">
+        <div class="menuAligned">
+          <ul>
+            <li id="menuEvents">TECH EVENTS</li>
+            <li id="menuCulturalEvent" onclick="alert('Will update soon')">CULTURAL EVENTS</li>
+            <li id="menuProfile">PROFILE</li>
+            <li id="menuMyEvents">MY EVENTS</li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+    <!-- Menu ends -->
+
+    <!-- Registered Events Start-->
+    <section id="regedEvents">
+      <div class="header">
+        <button type="button" name="button" id="regedCloseBtn"></button>
+      </div>
+      <div class="regedContainer">
+        <h1 class="text-dark">My Events</h1>
+        <div class="regedTableCentered">
+          <div class="userInfoTable">
+            <table width="40%" class="table table-striped table-bordered table-hover">
+              <tr>
+                <td>Register ID</td>
+                <td><div id="regedId"></div></td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td><div id="regedName"></div></td>
+              </tr>
+            </table>
+          </div>
+          <table width="60%" id="RegedItems" class="table table-bordered table-hover table-striped">
+            <tr>
+              <th>Events</th>
+              <th>Time</th>
+              <th>Date</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- Registered Events End-->
+
+    <!-- User Profile -->
+    <section id="profileBox">
+      <div class="header">
+        <button type="button" id="profileBoxClose"></button>
+      </div>
+      <div class="userInfo">
+        <div class="profAligner">
+          <h1 class="text-dark">Profile</h1>
+          <div class = "id profileClear" id="profId"></div>
+          <div class = "profImg profileClear d-flex justify-content-center align-items-center" id="profImgId">
+            <div class="spinner-grow text-primary d-flex justify-content-center align-items-center" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+          <table class="table table-hover">
+            <tr>
+              <td>
+                <div class = "name profileClear" id="profName"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class = "mail profileClear" id="profEmail"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class = "mob profileClear" id="profMob"></div>
+              </td>
+            </tr>,
+            <tr>
+              <td>
+                <div class = "collage profileClear" id="profCollege"></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- User Profile Ends -->
+
+    <!-- Events Starts -->
+    <section id="eventsPage">
+      <div class="header">
+        <button type="button" id="eventCloseButn">  </button>
+      </div>
+      <h1 class="text-dark">EVENTS</h1>
+      <div class="container">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <strong> Info : </strong> All events has been conducted on March 29th and 30th of 2019.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <div class="eventContainer bg-dark">
+        <div class="eventAligned">
+          <div class="eventOrgedHolder">
+            <div class="eventBy">
+              <div class="eventByTitle">Combined Events</div>
+              <div class="eventByItems" id="combinedEvents">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">ABHYUDAYA Events - CSE</div>
+              <div class="eventByItems" id="abhyudaya">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">AVEGA Events - ME</div>
+              <div class="eventByItems" id="avega">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">EZIGEN Events - ECE</div>
+              <div class="eventByItems" id="ezigen">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">PROMETHEUS Events - BTE</div>
+              <div class="eventByItems" id="prometheus">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">VENTURA Events - CE</div>
+              <div class="eventByItems" id="ventura">
+              </div>
+            </div>
+            <div class="eventBy">
+              <div class="eventByTitle">19AMPS Events - EEE</div>
+              <div class="eventByItems" id="amps19">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="eventDetailBox">
+      <div class="eventDetailBoxAligner">
+        <div id="eventShowBox">
+          <div class="header">
+            <button type="button" id="eventShowBoxClose"></button>
+          </div>
+          <div class="eventShowBoxContentBox">
+            <div class="eventContentBoxCenter">
+              <h1 id="eventTitle" class="clearData"></h1>
+              <div id="regBtnBox">
+                <button type="button" name="button" id="reg" onclick="">Register</button>
+              </div>
+              <p id="eventInfo" class="clearData"></p>
+              <div class="text-center  loadingIcon">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+              <div id="infoTable">
+                <table class="table table-bordered table-striped table-hover">
+                  <tr>
+                    <td>Rules</td>
+                    <td> <div id="rules" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td> <div id="partType" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Online Registraion</td>
+                    <td> <div id="onlineReg" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Registration Fee</td>
+                    <td> <div id="fee" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Reward</td>
+                    <td> <div id="prize" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Schedule</td>
+                    <td> <div id="schedule" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Venue</td>
+                    <td> <div id="venue" class="clearData"></div> </td>
+                  </tr>
+                  <tr>
+                    <td>Contact</td>
+                    <td> <div id="contact" class="clearData"></div> </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+      </div> <!-- eventDetailBoxAligner Ends -->
+
+
+
+      </div>
+    </section>
+    <!-- Events Ends -->
+
+    <!-- Typed -->
+    <!-- <div class="typeStyleTextPos">
+      <div class="typeStyleText"></div>
+    </div> -->
+
+
+    <!-- window -->
+    <section class="window firstPage" >
+      <!-- slideShow -->
+      <div id="carouselExampleIndicators" class="carousel slide" style="scroll-snap-align: start;" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner carousel-fade">
+          <div class="carousel-item active">
+            <div class="img1">
+              <div class="CarTextStyle">
+                <h1 class="animated fadeInUp"> rudra '19 </h1>
+                <p class="animated fadeInDown fast delay-1s">2 DAY TECHNO-CULTURAL FEST</p>
+                <p class="animated fadeInDown fast delay-1s">29-30 MARCH</p>
+                <div class="signinBox animated fadeInDown faster delay-2s">
+                  <button type="button" class="HomeLoginButton" > LOGIN </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img2">
+             <div class="CarTextStyle">
+                 <!-- <h1 class="animated pulse"> Department </h1>
+                  <p class="animated fadeInDown fast delay-1s"> ALL  </p> -->
+                  <div class="carTFDepContainer">
+                    <div class="carTFDepBox">CSE</div>
+                    <div class="carTFDepBox">ME</div>
+                    <div class="carTFDepBox">ECE</div>
+                    <div class="carTFDepBox">BTE</div>
+                    <div class="carTFDepBox">CE</div>
+                    <div class="carTFDepBox">EEE</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img3">
+             <div class="CarTextStyle">
+             <p class="animated  fadeInUp fast delay-1s"> INTERCOLLEGIATE TECHNO-CULTURAL FEST 2k19</p>
+              <h1 class="animated heartBeat fast"> #meet@mets </h1>
+              <p class="animated  fadeInDown fast delay-1s"> IT'S ALL ABOUT THE VIBES </p>
+              <div class="stickyElements">
+                <a href="amb.html"><div> Ambassador </div></a>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Car ends -->
+
+      <div class="info" data-aos="fade" data-aos-duration="2000">
+        <div class="infoContent">
+          <div class="datebox">
+            <h3 class="datesIcon" data-aos="fade-up" data-aos-delay="750"></h3>
+            <div class="date"> 29 30 </div>
+            <div class="days"> Friday, Saturday </div>
+            <div class="mnthyr"> March 2019 </div>
+          </div>
+          <div class="loc">
+            <h3 class="locationIcon"  data-aos="fade-up" data-aos-delay="750"></h3>
+            @  MET'S
+            <div class="locSub">
+              SCHOOL OF ENGINEERING
+              <br>
+              <a target="_blank" href="https://goo.gl/maps/1g4HQJmxevH2">
+                 &#171;
+                  directions
+                 &#187;
+               </a>
+            </div>
+          </div>
+          <div class="infoEvents">
+            <h3 class="infoEventIcon"  data-aos="fade-up" data-aos-delay="750"></h3>
+            <div class="infoEventText"> 50 + Events </div>
+            <button type="button" class="infoRegisterNow btn btn-danger animated infinite headShake slow showEvents"> Register Now </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <h4 data-aos="slide-up">About</h4>
+        <div class="AboutAliner">
+          <p class="aboutText" data-aos="fade-up" data-aos-duration="2000">
+            “RUDRA”, the final destination of the entire universe in to which It merges back after the decandence. When great minds came together, “Rudra 2k19” happens and the “BREAKTHROUGH” is not far away. Our fest was born with a sole purpose, to create and sustain a society of inquistive minds.
+            <button class="btn btn-primary" id="readAboutMore" type="button" name="button">Read More</button>
+          </p>
+          <div class="teaserAligner">
+            <iframe data-aos="fade" data-aos-duration="2000" src="https://www.youtube.com/embed/Iqw_ieCgiRk?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="topEvents">
+        <!-- <h1 data-aos="zoom-in-down">TOP EVENTS </h1> -->
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg hWindowsCenter">
+            <div class="hTitle"> DIRT BIKE RACE </div>
+            <p> 2 wheels 1 engine no limits</p>
+            <div class="pageDirContainer"> <div class="rightDirections dirSingle"> </div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg">
+            <div class="hTitle"> DJ Night </div>
+            <p> Close your eyes and let the music set you free</p>
+            <div class="pageDirContainer"> <div class="leftDirections"></div><div class="rightDirections"></div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg hWindowsCenter">
+            <div class="hTitle"> DFG Stund Riding </div>
+            <p> Hold your breath and stay amazed  </p>
+            <div class="pageDirContainer"> <div class="leftDirections"></div><div class="rightDirections"> </div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg">
+            <div class="hTitle"> INDO WESTERN RAMP WALK </div>
+            <p> Ramp up!... & be your own label </p>
+            <div class="pageDirContainer"> <div class="leftDirections"></div><div class="rightDirections"></div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg hWindowsCenter">
+            <div class="hTitle"> Air Show </div>
+            <p> Witness the magic in air </p>
+            <div class="pageDirContainer"> <div class="leftDirections"></div><div class="rightDirections"> </div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg">
+            <div class="hTitle"> STEP UP AND DANCE </div>
+            <p> Its a feeling expressed from the inside out </p>
+            <div class="pageDirContainer"> <div class="leftDirections"></div><div class="rightDirections"></div> </div>
+          </div>
+        </div>
+        <div class="hWindows">
+          <div data-aos="fadeIn" class="dark-bg">
+            <div class="hTitle"> FOOD-FEST </div>
+            <p> Good food is Good Mood </p>
+            <div class="pageDirContainer"> <div class="leftDirections dirSingle"></div> </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="OrgByTab">
+        <div class="OrgAligned">
+          <h1 data-aos="fade-down">Organized By</h1>
+          <div class="OrgDetailContainer">
+            <a href="http://metsengg.ac.in" target="_blank"><div class="OrgOne" data-aos="fade-down"></div></a>
+            <h4 data-aos="fade" data-delay="750">MET'S School Of Engineering</h4>
+            <p data-aos="fade" data-delay="750"> MALA  </p>
+            <!-- <br> <a href="http://metsengg.ac.in" target="_blank">metsengg.ac.in</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footerCentered" data-aos="zoom-in">
+          <div data-aos="fade" class="socialIcons" data-aos="fade-up">
+            <a href="https://www.instagram.com/explore/tags/rudra19/" target="_blank"> <div class="instagram"> </div></a>
+            <a href="https://www.facebook.com/hashtag/rudra19" target="_blank"> <div class="facebook"> </div></a>
+            <a href="https://twitter.com/rudrafest" target="_blank"> <div class="twitter"> </div></a>
+          </div>
+          &#169; Copyrights Reserved
+          <p> <a href="dev"> Developed by HARK </a></p>
+        </div>
+      </div>
+    </section> <!-- Window Ends -->
+
+
+  </body>
+</html>

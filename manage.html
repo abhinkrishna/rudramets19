@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title> Manage Portal | Rudra19 </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Hark Designs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/css/images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="styles/css/manage.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/bootstrap.min.css">
+    <script src="scripts/bs/popper.min.js" charset="utf-8"></script>
+    <script src="scripts/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/manage.js" charset="utf-8"></script>
+    <!-- firebase init -->
+    <script src="scripts/fb/firebase-app.js" charset="utf-8"></script>
+    <script src="scripts/fb/firebase-auth.js" charset="utf-8"></script>
+    <script src="scripts/fb/firebase-firestore.js" charset="utf-8"></script>
+    <script src="appConfig/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col fullSize d-flex justify-content-center align-items-center">
+          <div class="authContainer">
+            <div class="row">
+              <div class="col">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">+91</span>
+                </div>
+                  <input type="text" class="form-control" id="phoneNo" placeholder="Registered Number" maxlength="10">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="checkValid">Validate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="alert alert-success regged" role="alert">
+                  <div class="row">
+                    <div class="col">
+                      <div class="eventDetails text-center"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col p-3 d-flex justify-content-center">
+                      <button class="btn btn-info" type="button" id="getOTP">Get OTP</button>
+                    </div>
+                  </div>
+                  <div class="otpVeri">
+                    <div class="row">
+                      <div class="col-2"></div>
+                      <div class="col-8 d-flex justify-content-center">
+                        <input type="text" class="form-control" placeholder="Enter OTP" maxlength="6" id="otp">
+                        <button type="button" class="btn btn-info" name="button" id="otpAuth">Verify</button>
+                      </div>
+                      <div class="col-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="alert alert-danger notRegged" role="alert">
+                  This number is not registered with any events
+                  <ul>
+                    <li>Make sure you entered correct number</li>
+                    <li>For help <a href="tel:8113987975"> <button type="button" class="btn btn-info">Call Web Administrator</button> </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="participantsContainer">
+            <div class="logoutContnr">
+              <button type="button" class="btn btn-danger" id="logoutBtn" name="button">Logout</button>
+            </div>
+            <div class="row">
+              <div class="2"></div>
+              <div class="col-8 d-flex justify-content-center">
+                <table class="table table-bordered">
+                  <tr>
+                    <td colspan="2"><h2 class="EventTitleName text-center"></h2></td>
+                  </tr>
+                  <tr>
+                    <td>Co-ordinator </td>
+                    <td> <p class="coName"></p> </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="2"></div>
+            </div>
+            <table class="table table-bordered table-hover" id="eventParticipList">
+            </table>
+            <div class="alert alert-warning d-none" id="warning" role="alert">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row authCredit">
+        <div class="col text-center">
+          <p class="text-secondary ">powered by HARK</p>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

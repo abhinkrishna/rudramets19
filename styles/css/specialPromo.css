@@ -1,0 +1,304 @@
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+
+.slide1,.slide2,.slide3,.slide4,.hackSlide1,.hackSlide2,.hackSlide3,.hackSlide4{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide1 {
+  background: url(images/pubg/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide2 {
+  background: url(images/pubg/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide3 {
+  background: url(images/pubg/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide4 {
+  background: url(images/pubg/4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hackSlide1 {
+  background: url(images/hackearlo/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hackSlide2 {
+  background: url(images/hackearlo/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hackSlide3 {
+  background: url(images/hackearlo/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hackSlide4 {
+  background: url(images/hackearlo/4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.CarContainer {
+  width: 100%;
+  height: 100vh;
+  background: url(images/pubg/trans.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.CarContainer h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 80px;
+  color: #fff;
+  font-family: 'Black Ops One', cursive;
+}
+.CarContainer h3 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Black Ops One', cursive;
+}
+.CarContainer p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+.CarAligner img {
+  width: 400px;
+  height: 80px;
+}
+
+
+.PUBGAboutBox {
+  padding: 50px 0px 50px 0px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(images/pubg/4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.PUBGAboutBoxAligner {
+  width: 80%;
+}
+.PUBGmoreInfo {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 5% 20px 5%;
+}
+.PUBGmoreInfo p {
+  font-size: 17px;
+  color: #aaa;
+}
+.text-ul-aaa{
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0px;
+}
+.text-ul-aaa li{
+  color: #585858;
+  margin-bottom: 40px;
+}
+.text-aaa {
+  color: #585858;
+}
+
+.pubgReg {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pubgBiggtStyle {
+  margin: 30px 10px 30px 10px;
+  font-size: 60px;
+  color: #777;
+  width: 100%;
+  text-align: center;
+}
+.PUBGPrizeBox {
+  width: 100%;
+  min-height:100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PUBGPrizeBoxAliner {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  color: #aaa;
+}
+.pubgDinnerImg {
+  margin: 20px;
+  width: 320px;
+  height:150px;
+  background: url(images/pubg/dnner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.PUBGSponsorsBox {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SponsorContainer h1 {
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  color: #242424;
+}
+.SponsorContainer  {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sponsors {
+  width: 200px;
+  min-height: 200px;
+  margin: 30px;
+}
+.sponsorIcon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sponsors h3 {
+  margin: 10px;
+  width: 100%;
+  color: #888;
+  text-align: center;
+}
+.sponsors p {
+  text-align: center;
+  color: #aaa;
+}
+.hark {
+  width: 100px;
+  height: 100px;
+  background:url(images/pubg/spons/hark.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.astral {
+  width: 100px;
+  height: 100px;
+  background:url(images/pubg/spons/astral.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.iha {
+  width: 100px;
+  height: 100px;
+  background:url(images/pubg/spons/iha.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bg-transDark {
+  width: 100%;
+  min-height: 100vh;
+  background: url(images/pubg/trans.png)
+}
+.footer {
+  width: 100%;
+  height: 300px;
+  background: #111;
+}
+.footerText {
+  /* position: absolute; */
+  text-align: center;
+  color: #aaa;
+  font-size: 10px;
+}
+
+.hackearloImg {
+    margin: 20px;
+    width: 320px;
+    height: 150px;
+    background: url(images/hackearlo/arduino.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.hackAboutBox {
+  padding: 50px 0px 50px 0px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(images/hackearlo/4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.iedc {
+  width: 200px;
+  height: 200px;
+  background:url(images/hackearlo/spons/iedc.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

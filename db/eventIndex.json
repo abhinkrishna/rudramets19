@@ -1,0 +1,236 @@
+[
+
+  {
+    "id":1002,
+    "name":"Fun Games",
+    "department":"BTE",
+    "bgurl":"styles/css/images/events/fungames.jpg"
+  },
+  {
+    "id":1003,
+    "name":"ARGUMENTALS",
+    "department":"BTE",
+    "bgurl":"styles/css/images/events/argumentals.jpg"
+  },
+  {
+    "id":1004,
+    "name":"Mind scribble",
+    "department":"BTE",
+    "bgurl":"styles/css/images/events/mindscribble.jpg"
+  },
+  {
+    "id":1005,
+    "name":"IDEA HUNT",
+    "department":"BTE",
+    "bgurl":"styles/css/images/events/ideahunt.jpg"
+  },
+  {
+    "id":1021,
+    "name":"GRAVEL",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/gravel.jpg"
+  },
+  {
+    "id":1023,
+    "name":"Meet your Meter",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/meeturmeeter.jpg"
+  },
+  {
+    "id":1024,
+    "name":"Mach Grafica",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/machgrafica.jpg"
+  },
+  {
+    "id":1025,
+    "name":"CLASH A TRONS",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/clashatron.png"
+  },
+  {
+    "id":1026,
+    "name":"Silver spin",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/silverspin.jpg"
+  },
+  {
+    "id":1027,
+    "name":"QUIZ CUS",
+    "department":"ECE",
+    "bgurl":"styles/css/images/events/quizcus.png"
+  },
+  {
+    "id":1056,
+    "name":"AIR SHOW",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/airshow.jpg"
+  },
+  {
+    "id":1055,
+    "name":"PHYSIQUE CONTEST",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/physiquecontest.jpeg"
+  },
+  {
+    "id":1041,
+    "name":"ARCHERY",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/archary.jpg"
+  },
+  {
+    "id":1042,
+    "name":"DARTS",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/dart.jpg"
+  },
+  {
+    "id":1043,
+    "name":"REPARO",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/reparo.jpg"
+  },
+  {
+    "id":1044,
+    "name":"FREE SHOT",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/freeshot.jpg"
+  },
+  {
+    "id":1045,
+    "name":"BUZZER",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/buzzer.jpg"
+  },
+  {
+    "id":1046,
+    "name":"CADD MASTER",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/caddmaster.jpg"
+  },
+  {
+    "id":1047,
+    "name":"DR.PARKER",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/drparker.jpeg"
+  },
+  {
+    "id":1048,
+    "name":"PITSTOP",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/pitstop.jpg"
+  },
+  {
+    "id":1049,
+    "name":"PAPER PLANE",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/paperplane.jpg"
+  },
+  {
+    "id":1050,
+    "name":"FORENSIC WORKSHOP",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/forensic.jpeg"
+  },
+  {
+    "id":1051,
+    "name":"IDEA FEST",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/ideafest.jpg"
+  },
+  {
+    "id":1053,
+    "name":"FOR THE THORNE",
+    "department":"ME",
+    "bgurl":"styles/css/images/events/forthethrone.jpg"
+  },
+  {
+    "id":1061,
+    "name":"WEB DESIGNING",
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/webdesigning.jpg"
+  },
+  {
+    "id":1062,
+    "name":"DEVIL'S HOME",
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/devilshome.jpg"
+  },
+  {
+    "id":1063,
+    "name":"GAME ARCADE",
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/gamearcade.jpg"
+  },
+  {
+    "id":1064,
+    "name":"PUBG TOURNAMENT",
+    "sp":true,
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/pubgtournamentcse.jpg"
+  },
+  {
+    "id":1065,
+    "name":"BLIND CODING",
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/blindcoding.png"
+  },
+  {
+    "id":1066,
+    "name":"NFS Most Wanted",
+    "department":"CSE",
+    "bgurl":"styles/css/images/events/nfsmostwanted.jpg"
+  },
+  {
+    "id":1081,
+    "name":"Mr Investigator",
+    "department":"EEE",
+    "bgurl":"styles/css/images/events/mrinvi.jpg"
+  },
+  {
+    "id":1082,
+    "name":"SPOT CHOREO",
+    "department":"EEE",
+    "bgurl":"styles/css/images/events/spotchoreo.jpg"
+  },
+  {
+    "id":1083,
+    "name":"SPOT TIKTOK",
+    "department":"EEE",
+    "bgurl":"styles/css/images/events/spottiktok.jpg"
+  },
+  {
+    "id":1101,
+    "name":"Treasure hunt",
+    "department":"CE",
+    "bgurl":"styles/css/images/events/teasurehunt.jpg"
+  },
+  {
+    "id":1102,
+    "name":"Max load",
+    "department":"CE",
+    "bgurl":"styles/css/images/events/maxload.jpg"
+  },
+  {
+    "id":1103,
+    "name":"CAD MAD",
+    "department":"CE",
+    "bgurl":"styles/css/images/events/cadmad.jpg"
+  },
+  {
+    "id":1200,
+    "name":"Hackearlo",
+    "department":"ECE AND CSE",
+    "sp":true,
+    "combined":true,
+    "bgurl":"styles/css/images/events/hackearlo.png"
+  },
+  {
+    "id":1201,
+    "name":"PAPER PRESENTATION",
+    "department":"CSE , ECE AND BTE",
+    "combined":true,
+    "bgurl":"styles/css/images/events/paperpresentation.jpg"
+  }
+
+]
